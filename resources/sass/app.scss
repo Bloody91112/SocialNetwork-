@@ -1,0 +1,324 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+$base-green: #00760f;
+$light-green: #00b01b;
+$base_grey: #4a4a4a;
+
+body {
+    background: black;
+}
+canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display:block;
+    z-index: -1;
+}
+
+a {
+    color: #0037ff;
+    font-weight: bold;
+}
+
+.preloader-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5)
+}
+
+.text-green{
+    color: $base-green;
+
+    &:hover{
+        color: $light-green;
+        cursor: pointer;
+    }
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid $base-green;
+    border-color: $base-green transparent $base-green transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.custom-navbar{
+    background-color: rgba(0,0,0,0.7);
+    a {
+        color: $base-green!important;
+    }
+
+    .navbar-brand{
+        color: $base-green;
+    }
+    .navbar-toggler{
+        background-color: black;
+        color: $base-green;
+    }
+    .navbar-toggler-icon i {
+        color: $base-green;
+        font-size: 26px;
+    }
+    .dropdown-menu{
+        background: rgba(0,0,0,0.5);
+    }
+    .dropdown-menu a, .dropdown-toggle{
+        font-weight: bold;
+    }
+}
+
+
+input {outline: none;}
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px $base-green !important;
+    color: white;
+}
+
+.btn-green{
+    background-color: $base-green;
+    color: black;
+    border: unset;
+    padding: 5px 10px;
+    border-radius: 5px;
+    &:hover, &:active{
+        font-weight: bold;
+        color: black;
+        background-color: $base-green;
+    }
+}
+
+
+.dz-details,
+.dz-progress,
+.dz-error-message,
+.dz-success-mark,
+.dz-error-mark{
+    display: none;
+}
+
+.author-page, .posts-page{
+    opacity: 0.9;
+}
+
+.btn-green-link{
+    color: $base-green;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover{
+        color: $light-green;
+    }
+}
+
+
+
+.custom-card{
+    border: 1px solid $base-green;
+    background-color: black;
+
+
+    .subscribed{
+        background-color: $light-green;
+        color: black;
+        border-radius: 5px;
+        padding: 1px 8px;
+        margin: 0 5px;
+        box-shadow: 0 0 5px $light-green;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    .card-header{
+        position: relative;
+        color: black;
+        font-weight: bold;
+        background-color: $base-green;
+        border-bottom: 1px solid $base-green;
+
+        .tag-list{
+            display: inline-flex;
+            flex-wrap: wrap;
+            column-gap: 5px;
+        }
+
+        .tag{
+            background-color: black;
+            color: $base-green;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .title{
+            margin-right: 10px;
+            font-size: 19px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .category a{
+            color: black;
+            text-decoration: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .card-body{
+        color: $base-green;
+        font-weight: bold;
+        background-color: black;
+    }
+
+    .card-footer-data{
+        color: $base_grey;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .author{
+            color: $base-green;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .comments,.likes{
+            text-decoration: none;
+            margin: 0 5px;
+            display: inline-block;
+            color: $base_grey;
+            transition-duration: 0.3s;
+            cursor: pointer;
+            border: 2px solid;
+            padding: 2px 5px;
+            border-radius: 5px;
+            background-color: black;
+            font-weight: bold;
+        }
+
+        .count{
+            color: $base-green;
+        }
+    }
+
+    .card-footer-green-btn{
+        background-color: $base-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover{
+            cursor: pointer;
+            transition-duration: 0.3s;
+            background-color: $light-green;
+        }
+    }
+
+    .btn-green{
+        background-color: $base-green;
+        color: black;
+        border: unset;
+        padding: 5px 10px;
+        border-radius: 5px;
+        &:hover, &:active{
+            font-weight: bold;
+            color: black;
+            background-color: $base-green;
+        }
+    }
+
+    .dropdown-menu{
+        background: black;
+
+    }
+
+    .dropdown-menu li a{
+        color: $base-green;
+        &:hover{
+            background: $base-green;
+            color: black;
+        }
+    }
+
+
+
+    .col-form-label{
+        white-space: nowrap;
+    }
+
+    .form-control{
+        background-color: black;
+        &:focus{
+            border-color: $base-green;
+        }
+    }
+
+    input, textarea{
+        color: $base-green!important;
+        font-weight: bold!important;
+        background-color: black!important;
+        border: 1px solid $base-green!important;
+
+        &:hover,&:active  {
+            color: unset;
+            background-color: unset;
+            outline: unset;
+            box-shadow:unset;
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+
+
+
+
