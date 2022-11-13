@@ -1,3 +1,3 @@
-located here: https://social-network-project.online/  
-login: guest@mail.ru, password: 123123123  
-admin dashboard here:  https://social-network-project.online/admin  
+Located here: https://social-network-project.online/  
+Login: guest@mail.ru, Password: 123123123  
+Admin-dashboard here:  https://social-network-project.online/admin  
