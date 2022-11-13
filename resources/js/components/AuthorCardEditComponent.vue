@@ -19,11 +19,11 @@
             </transition>
 
 
-            <li v-if="age" class="list-group-item">
+            <li class="list-group-item">
                 Age <input v-on:focusout="editProfile('age', age)" v-model="age" type="number">
             </li>
 
-            <li v-if="gender" class="list-group-item">
+            <li class="list-group-item">
                 Gender <select v-on:change="editProfile('gender', gender)" v-model="gender" class="form-select form-select-sm" aria-label=".form-select-sm">
                     <option :selected="gender ==='male' ? 'selected' : ''"  value="male">Male</option>
                     <option :selected="gender ==='female' ? 'selected' : ''" value="female">Female</option>

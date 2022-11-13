@@ -27,6 +27,7 @@ class RoleController extends Controller
 
     public function store(StoreRequest $request)
     {
+        $this->authorize('create', User::class);
         $data = $request->validated();
         Role::firstOrCreate(['name' => $data['name']]);
         return redirect()->route('admin.roles.index');
@@ -47,6 +48,7 @@ class RoleController extends Controller
 
     public function update(UpdateRequest $request, Role $role)
     {
+        $this->authorize('update', auth()->user());
         $role->update($request->validated());
         return redirect()->route('admin.roles.index');
     }
@@ -54,6 +56,7 @@ class RoleController extends Controller
 
     public function destroy(Role $role)
     {
+        $this->authorize('delete', auth()->user());
         $role->delete();
         return redirect()->route('admin.roles.index');
     }

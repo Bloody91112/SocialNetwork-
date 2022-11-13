@@ -30,6 +30,7 @@ class PostController extends Controller
 
     public function store(StoreRequest $request)
     {
+        $this->authorize('create', User::class);
         $data = $request->validated();
 
         if (isset($data['tags'])){
@@ -37,14 +38,11 @@ class PostController extends Controller
             unset($data['tags']);
         }
 
-
         $post = Post::create($data);
 
         if (isset($data['tags'])){
             $post->tags()->attach($tagsIds);
         }
-
-
         return redirect()->route('admin.posts.index');
     }
 
@@ -63,6 +61,7 @@ class PostController extends Controller
 
     public function update(UpdateRequest $request, Post $post)
     {
+        $this->authorize('update', auth()->user());
         $data = $request->validated();
 
         if (isset($data['tags'])) {
@@ -81,6 +80,7 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
+        $this->authorize('delete', auth()->user());
         $post->tags()->detach();
         $post->comments()->delete();
         $post->likes()->delete();

@@ -24,6 +24,7 @@ class CommentController extends Controller
 
     public function destroy(Comment $comment)
     {
+        $this->authorize('delete', auth()->user());
         $comment->delete();
         return redirect()->route('admin.comments.index');
     }

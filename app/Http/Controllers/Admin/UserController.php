@@ -27,7 +27,7 @@ class UserController extends Controller
 
     public function store(StoreRequest $request)
     {
-
+        $this->authorize('create', User::class);
         $data = $request->validated();
 
         $data['password'] = Hash::make($data['password']);
@@ -56,6 +56,7 @@ class UserController extends Controller
 
     public function update(UpdateRequest $request, User $user)
     {
+        $this->authorize('update', auth()->user());
         $data = $request->validated();
 
         if (isset($data['avatar'])){
@@ -75,6 +76,7 @@ class UserController extends Controller
 
     public function destroy(User $user)
     {
+        $this->authorize('delete', auth()->user());
         Subscription::where('friend_id', $user->id)->delete();
         $user->subscriptions()->delete();
 
