@@ -1,0 +1,86 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.56519b3e.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/views/auth/Login.vue",
+      "resources/js/views/auth/Register.vue",
+      "resources/js/views/post/Index.vue",
+      "resources/js/views/author/Show.vue"
+    ],
+    "css": [
+      "assets/app.46091460.css"
+    ]
+  },
+  "resources/js/views/auth/Login.vue": {
+    "file": "assets/Login.93e83650.js",
+    "src": "resources/js/views/auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/views/auth/Register.vue": {
+    "file": "assets/Register.4574407a.js",
+    "src": "resources/js/views/auth/Register.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/views/post/Index.vue": {
+    "file": "assets/Index.8df7295e.js",
+    "src": "resources/js/views/post/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_PreloaderComponent.b983deca.js",
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Index.01c40a2e.css"
+    ]
+  },
+  "_PreloaderComponent.b983deca.js": {
+    "file": "assets/PreloaderComponent.b983deca.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/PreloaderComponent.8976fedb.css"
+    ]
+  },
+  "resources/js/views/author/Show.vue": {
+    "file": "assets/Show.2a2b46f4.js",
+    "src": "resources/js/views/author/Show.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_PreloaderComponent.b983deca.js"
+    ],
+    "css": [
+      "assets/Show.5c8cdae6.css"
+    ]
+  },
+  "resources/js/views/post/Index.css": {
+    "file": "assets/Index.01c40a2e.css",
+    "src": "resources/js/views/post/Index.css"
+  },
+  "PreloaderComponent.css": {
+    "file": "assets/PreloaderComponent.8976fedb.css",
+    "src": "PreloaderComponent.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.46091460.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/views/author/Show.css": {
+    "file": "assets/Show.5c8cdae6.css",
+    "src": "resources/js/views/author/Show.css"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app.684fd82f.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  }
+}
