@@ -62,6 +62,10 @@
       "assets/Show.5c8cdae6.css"
     ]
   },
+  "resources/js/app.css": {
+    "file": "assets/app.46091460.css",
+    "src": "resources/js/app.css"
+  },
   "resources/js/views/post/Index.css": {
     "file": "assets/Index.01c40a2e.css",
     "src": "resources/js/views/post/Index.css"
@@ -69,10 +73,6 @@
   "PreloaderComponent.css": {
     "file": "assets/PreloaderComponent.8976fedb.css",
     "src": "PreloaderComponent.css"
-  },
-  "resources/js/app.css": {
-    "file": "assets/app.46091460.css",
-    "src": "resources/js/app.css"
   },
   "resources/js/views/author/Show.css": {
     "file": "assets/Show.5c8cdae6.css",

@@ -64,9 +64,22 @@ export default {
             postLikes : 'postLikes'
         }),
 
-        likeStatus() {return !!this.postLikes(this.post.id).find(obj => obj.user_id === this.user.id)},
-        subscribed() { return !!this.user.subscriptions.find(obj => obj.friend.id === this.post.user.id) },
-        myPost() { return this.post.user.id === this.user.id }
+        likeStatus() {
+            if (this.user) {
+                return !!this.postLikes(this.post.id).find(obj => obj.user_id === this.user.id)
+            }
+        },
+        subscribed() {
+            if (this.user){
+                return !!this.user.subscriptions.find(obj => obj.friend.id === this.post.user.id)
+            }
+        },
+        myPost() {
+            if (this.user){
+                return this.post.user.id === this.user.id
+            }
+
+        }
     },
     methods: {
         toggleLike(event) {
